@@ -30,7 +30,7 @@ const getLink = async (req, res) => {
 
 // create new link
 const createLink = async (req, res) => {
-  const {title, load, reps} = req.body
+  const {name,link,description,tags} = req.body
 
   let emptyFields = []
 
@@ -43,6 +43,9 @@ const createLink = async (req, res) => {
   if(!description) {
     emptyFields.push('description')
   }
+  if(!tags) {
+    emptyFields.push('tags')
+  }
   if(emptyFields.length > 0) {
     return res.status(400).json({ error: 'Please fill in all the fields', emptyFields })
   }
@@ -50,7 +53,7 @@ const createLink = async (req, res) => {
   // add doc to db
   try {
     const user_id = req.user._id
-    const link = await Link.create({name,link,description, user_id})
+    const link = await Link.create({name,link,description,tags, user_id})
     res.status(200).json(link)
   } catch (error) {
     res.status(400).json({error: error.message})
