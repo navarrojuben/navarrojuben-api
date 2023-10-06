@@ -17,6 +17,8 @@ app.use(cors({
     "https://navarrojuben.onrender.com"
   ]
 }))
+//https://navarrojuben.onrender.com/api/links
+//https://navarrojuben.onrender.com/api/user
 
 // middleware
 app.use(express.json())

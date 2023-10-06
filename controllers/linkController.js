@@ -53,8 +53,8 @@ const createLink = async (req, res) => {
   // add doc to db
   try {
     const user_id = req.user._id
-    const link = await Link.create({name,link,description,tags, user_id})
-    res.status(200).json(link)
+    const newlink = await Link.create({name,link,description,tags, user_id})
+    res.status(200).json(newlink)
   } catch (error) {
     res.status(400).json({error: error.message})
   }
