@@ -9,11 +9,12 @@ const userRoutes = require('./routes/user')
 // express app
 const app = express()
 
-//corse
+//cors
 app.use(cors({
   origin:
   [
     "http://localhost:3000",
+    "http://localhost:4000",
     "https://navarrojuben.onrender.com"
   ]
 }))

@@ -89,7 +89,7 @@ const updateLink = async (req, res) => {
     ...req.body
   })
 
-  if (!workout) {
+  if (!link) {
     return res.status(400).json({error: 'No such link'})
   }
 
