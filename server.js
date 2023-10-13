@@ -15,7 +15,8 @@ app.use(cors({
   [
     "http://localhost:3000",
     "http://localhost:4000",
-    "https://navarrojuben.onrender.com"
+    "https://navarrojuben.onrender.com",
+    "https://navarrojuben.netlify.app/"
   ]
 }))
 //https://navarrojuben.onrender.com/api/links
