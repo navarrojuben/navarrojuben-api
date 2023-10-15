@@ -40,14 +40,8 @@ const createLink = async (req, res) => {
   if(!link) {
     emptyFields.push('link')
   }
-  if(!description) {
-    emptyFields.push('description')
-  }
-  if(!tags) {
-    emptyFields.push('tags')
-  }
   if(emptyFields.length > 0) {
-    return res.status(400).json({ error: 'Please fill in all the fields', emptyFields })
+    return res.status(400).json({ error: 'Fill in fields with *', emptyFields })
   }
 
   // add doc to db
