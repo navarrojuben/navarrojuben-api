@@ -12,12 +12,10 @@ const linkSchema = new Schema({
     required: true
   },
   description: {
-    type: String,
-    required: true
+    type: String
   },
   tags: {
-    type: String,
-    required: true
+    type: String
   },
   user_id: {
     type: String,
